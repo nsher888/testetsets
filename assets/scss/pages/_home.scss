@@ -1,0 +1,1254 @@
+.hero {
+	background-image: url("../images/main-bg-image-min.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	min-height: calc(100vh - 11.2rem);
+	position: relative;
+	padding-bottom: 5rem;
+
+	&__inner {
+		@include max-setter;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__text-container {
+		max-width: 57.4rem;
+	}
+
+	&__title {
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 6.4rem;
+		padding-top: 9.6rem;
+		margin-bottom: 4rem;
+
+		@media (max-width: 2170px) {
+			font-size: 5.5rem;
+			padding-top: 6.4rem;
+			margin-bottom: 2rem;
+		}
+
+		@media (max-width: 1500px) {
+			font-size: 4.5rem;
+			padding-top: 3.4rem;
+			margin-bottom: 1rem;
+		}
+
+		@media (max-width: 281px) {
+			font-size: 3.4rem;
+		}
+	}
+
+	p {
+		font-family: "TBC Contractica";
+		font-weight: 500;
+		font-size: 1.6rem;
+		line-height: 3.6rem;
+
+		@media (max-width: 1700px) {
+			line-height: 3.2rem;
+		}
+	}
+
+	&__question {
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 2.4rem;
+		margin-top: 4.8rem;
+		margin-bottom: 1.6rem;
+
+		@media (max-width: 1700px) {
+			margin-top: 3.2rem;
+			margin-bottom: 1.1rem;
+		}
+	}
+
+	p:nth-of-type(2) {
+		margin-bottom: 6rem;
+
+		@media (max-width: 1700px) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	// &::after {
+	// 	position: absolute;
+	// 	content: "";
+	// 	width: 100%;
+	// 	height: 9.6rem;
+	// 	background: rgba(217, 217, 217, 0.2);
+	// 	bottom: 3%;
+	// 	left: 0;
+	// }
+
+	&__img {
+		width: 75rem;
+
+		@media (max-width: 1700px) {
+			width: 65rem;
+		}
+
+		@media (max-width: 1600px) {
+			width: 60rem;
+		}
+
+		@media (max-width: 1213px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__line {
+		width: 100%;
+		height: 9.6rem;
+		background: rgba(217, 217, 217, 0.2);
+		margin-top: 2%;
+	}
+}
+
+.history {
+	padding: 6.4rem 0;
+
+	&__wrapper {
+		@include max-setter;
+
+		display: grid;
+		row-gap: 3.2rem;
+		column-gap: 1.5rem;
+
+		@media (min-width: 1200px) {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: minmax(48.4rem, auto) minmax(50rem, auto);
+		}
+
+		@media (max-width: 1520px) {
+			padding: 0 2rem;
+		}
+
+		& > * {
+			z-index: 24121;
+
+			background: rgba(98, 98, 98, 0.2);
+			border-radius: 1rem;
+			backdrop-filter: blur(0.4rem);
+			padding: 2.4rem;
+			transition: background 0.2s;
+
+			&:hover {
+				background: rgba(98, 98, 98, 0.35);
+			}
+		}
+	}
+
+	&__title {
+		margin-top: 1.6rem;
+		margin-bottom: 1.6rem;
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+	}
+
+	&__text {
+		font-family: "TBC Contractica";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+		margin-bottom: 1.6rem;
+		text-align: justify;
+	}
+
+	&__miths {
+		display: flex;
+		flex-direction: column;
+		// max-width: 46.4rem;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__profile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+
+		img {
+			height: 25rem;
+			width: auto;
+
+			@media (min-width: 800px) {
+				height: 39.5rem;
+			}
+
+			@media (min-width: 1200px) {
+				height: 39.5rem;
+				width: auto;
+			}
+		}
+
+		@media (min-width: 582px) {
+			grid-column: span 2;
+			order: 3;
+		}
+
+		@media (min-width: 600px) {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+
+		@media (min-width: 800px) {
+			gap: 10rem;
+		}
+
+		@media (min-width: 1521px) {
+			order: 2;
+		}
+
+		&__text {
+			h2 {
+				font-family: "TBC Contractica CAPS";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 2.4rem;
+				line-height: 3.6rem;
+				margin-bottom: 3.2rem;
+				text-align: center;
+			}
+
+			&__info {
+				display: flex;
+				flex-direction: column;
+				gap: 2.4rem;
+
+				&__item {
+					display: flex;
+					align-items: center;
+					gap: 1.6rem;
+
+					p {
+						max-width: 36rem;
+
+						font-family: "TBC Contractica";
+						font-style: normal;
+						font-size: 1.4rem;
+					}
+
+					svg {
+						flex-shrink: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&__writings {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: 582px) {
+			grid-column: span 2;
+			order: 4;
+		}
+
+		@media (min-width: 1200px) {
+			order: 3;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__tales {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: 1200px) {
+			order: 4;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+}
+
+.stars_wrapper {
+	overflow: hidden;
+	background: radial-gradient(ellipse at bottom, #1b2735 0%, #131a3e 100%);
+	padding-bottom: 6.4rem;
+}
+
+.heading-primary {
+	font-family: "TBC Contractica CAPS";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.4rem;
+}
+
+.solar {
+	@include max-setter;
+	padding: 0;
+
+	&__planets {
+		display: flex;
+		padding: 6.4rem 0;
+
+		& > div div img {
+			position: relative;
+			z-index: 21321222;
+		}
+	}
+
+	&__text {
+		background: rgba(98, 98, 98, 0.2);
+		backdrop-filter: blur(5px);
+		border-radius: 1rem;
+		padding: 1.6rem;
+		text-align: center;
+
+		h2 {
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 2rem;
+			line-height: 3.6rem;
+		}
+
+		p {
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+			max-width: 18rem;
+		}
+	}
+
+	&__sun {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-line {
+			width: 0.6rem;
+			height: 17.5rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #f6ec42;
+			}
+		}
+	}
+
+	&__mercury {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 38rem;
+		margin-left: -3.5rem;
+
+		&-line {
+			margin-top: -3px;
+			width: 0.4rem;
+			height: 25.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #9daad6;
+			}
+		}
+	}
+
+	&__venus {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 16.5rem;
+		margin-left: -10.4rem;
+
+		&-line {
+			width: 0.4rem;
+			height: 7.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #f48258;
+			}
+		}
+	}
+
+	&__earth {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 37rem;
+		margin-left: -9.6rem;
+
+		&-line {
+			margin-top: -1px;
+			width: 0.4rem;
+			height: 7.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #2e78bc;
+			}
+		}
+	}
+	&__mars {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 6.5rem;
+		margin-left: -7.2rem;
+
+		&-line {
+			width: 0.6rem;
+			height: 17.5rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #ba4527;
+			}
+		}
+	}
+	&__jupiter {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 34.5rem;
+		margin-left: -7.2rem;
+
+		&-line {
+			margin-top: -3px;
+			width: 0.4rem;
+			height: 25.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #ed8851;
+			}
+		}
+	}
+	&__saturn {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 15.5rem;
+		margin-left: -2.7rem;
+
+		&-line {
+			margin-bottom: -6px;
+			width: 0.4rem;
+			height: 7.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #e88624;
+			}
+		}
+	}
+	&__uranus {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 36rem;
+		margin-left: -5.7rem;
+
+		&-line {
+			margin-top: -8px;
+			width: 0.4rem;
+			height: 7.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #3dc4ea;
+			}
+		}
+	}
+
+	&__neptune {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 6.5rem;
+		margin-left: -9.2rem;
+
+		&-line {
+			width: 0.6rem;
+			height: 17.5rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #7d67ab;
+			}
+		}
+	}
+
+	&__pluto {
+		// position: absolute;
+		// left: 25%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 38rem;
+		margin-left: -10.5rem;
+
+		&-line {
+			margin-top: -1px;
+			width: 0.4rem;
+			height: 25.8rem;
+			background: #d9d9d9;
+		}
+
+		&-text {
+			h2 {
+				color: #186b90;
+			}
+		}
+	}
+}
+
+.about {
+	@include max-setter;
+	margin-bottom: 4rem;
+
+	&__wrapper {
+		margin-top: 6.4rem;
+		background: rgba(98, 98, 98, 0.2);
+		backdrop-filter: blur(5px);
+		/* Note: backdrop-filter has minimal browser support */
+
+		border-radius: 1rem;
+		padding: 2.4rem;
+
+		display: flex;
+		gap: 13.6rem;
+
+		@media (max-width: 1500px) {
+			gap: 8rem;
+		}
+
+		@media (max-width: 1500px) {
+			gap: 4rem;
+		}
+
+		@media (max-width: 900px) {
+			flex-wrap: wrap;
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	&__profile {
+		display: inline-block;
+		img {
+			margin-bottom: 3.3rem;
+		}
+
+		h3 {
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 2.4rem;
+			margin-bottom: 0.8rem;
+		}
+
+		p {
+			font-family: "TBC Contractica";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.6rem;
+			color: #929292;
+			margin-bottom: 2.3rem;
+		}
+
+		&__icons {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1.8rem;
+
+			svg {
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@media (max-width: 900px) {
+			align-items: center;
+		}
+		p {
+			font-family: "TBC Contractica";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.6rem;
+			line-height: 3.8rem;
+			/* or 238% */
+
+			color: #ffffff;
+			max-width: 93rem;
+			// text-align: justify;
+			margin-bottom: 3.2rem;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1.6rem 3.2rem;
+		gap: 1.6rem;
+		background-color: transparent;
+
+		border: 4px solid #6691ff;
+		border-radius: 1rem;
+
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 1.4rem;
+		color: $base-color;
+		cursor: pointer;
+
+		svg {
+			margin-top: -5px;
+		}
+
+		transition: all 0.3s;
+
+		&:hover {
+			background: $text-primary;
+			color: $base-color;
+			border: 4px solid $text-primary;
+		}
+
+		&:active {
+			background: #435fa6;
+			color: $text-primary;
+
+			border: 4px solid #435fa6;
+
+			svg path {
+				stroke: $text-primary;
+				fill: #435fa6;
+			}
+		}
+	}
+}
+
+.anima {
+	background: rgba(98, 98, 98, 0.2);
+	backdrop-filter: blur(5px);
+	padding: 4.3rem 0;
+
+	&__wrapper {
+		display: flex;
+		gap: 2rem;
+		justify-content: space-between;
+		@include max-setter;
+
+		@media (max-width: 1243px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__left {
+		background-image: url(./../images/anima-left.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__right {
+		background-image: url(./../images/anima-right.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	&__hide-desktop {
+		@media (max-width: 1243px) {
+			display: none;
+		}
+	}
+
+	&__box {
+		text-align: center;
+		padding: 3.5rem 3.7rem;
+		border-radius: 1rem;
+		min-height: 29.5rem;
+
+		h3 {
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 4.8rem;
+			color: #6691ff;
+		}
+
+		h4 {
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 400;
+			font-size: 2.4rem;
+			margin-bottom: 3.2rem;
+		}
+
+		p {
+			font-family: "TBC Contractica";
+			font-style: normal;
+			font-weight: 400;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			max-width: 39.1rem;
+		}
+	}
+
+	&__main {
+		width: 47.2rem;
+
+		@media (max-width: 1243px) {
+			width: 100%;
+			margin-bottom: 2.4rem;
+		}
+
+		&__header {
+			display: flex;
+			gap: 2.4rem;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			margin-bottom: 1rem;
+
+			@media (max-width: 400px) {
+				gap: 1.4rem;
+			}
+
+			h2 {
+				font-family: "TBC Contractica CAPS";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 2.4rem;
+				color: #f5f5f5;
+
+				@media (max-width: 400px) {
+					font-size: 2rem;
+				}
+			}
+		}
+
+		p {
+			font-family: "TBC Contractica";
+			font-weight: 400;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			color: #f5f5f5;
+
+			text-align: center;
+		}
+	}
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+.copy {
+	background: #6691ff;
+
+	&__wrapper {
+		@include max-setter;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		height: 4rem;
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: 2.4rem;
+	}
+}
+
+.footer {
+	background: #1e1e1e;
+
+	&__wrapper {
+		max-width: 1335px;
+		margin: 0 auto;
+		padding: 3.2rem 5rem;
+		display: flex;
+		justify-content: space-around;
+
+		@media (max-width: 850px) {
+			flex-direction: column;
+			gap: 2rem;
+			padding: 2rem 2.4rem 4.8rem 2.4rem;
+		}
+
+		@media (max-width: 400px) {
+			padding: 2rem 1.6rem 4.8rem 1.6rem;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+
+		&__title {
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		ul {
+			@media (min-width: 851px) {
+				display: flex;
+				flex-direction: column;
+				gap: 1.6rem;
+			}
+		}
+
+		&__link {
+			display: flex;
+			text-decoration: none;
+			font-family: "TBC Contractica";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.4rem;
+			line-height: 2.4rem;
+
+			color: #929292;
+		}
+
+		&__socials {
+			display: flex;
+			gap: 1.6rem;
+		}
+	}
+}
+
+.sr-only {
+	display: none;
+}
+
+.instructions {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 66rem;
+	background: #1e1e1e;
+	border-radius: 1rem;
+	border: none;
+	text-align: center;
+
+	&-wrapper {
+		padding: 3.5rem;
+
+		@media (max-width: 700px) {
+			padding: 2.5rem;
+		}
+
+		@media (max-width: 400px) {
+			padding: 1.5rem;
+		}
+	}
+
+	@media (max-width: 700px) {
+		width: 90%;
+	}
+
+	@media (max-width: 400px) {
+		width: 90%;
+	}
+
+	img {
+		width: 100%;
+		max-height: 34.3rem;
+		border-radius: 1rem;
+
+		@media (max-width: 700px) {
+			max-height: 18rem;
+		}
+	}
+
+	h3 {
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 700;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		color: #f5f5f5;
+		margin-top: 3.2rem;
+		margin-bottom: 2.4rem;
+
+		@media (max-width: 700px) {
+			font-size: 2rem;
+			margin-top: 3rem;
+			margin-bottom: 2rem;
+		}
+
+		@media (max-width: 700px) {
+			font-size: 2rem;
+			margin-top: 3rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	p {
+		font-family: "TBC Contractica";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+		text-align: center;
+		color: #f5f5f5;
+		margin-bottom: 3.2rem;
+
+		@media (max-width: 700px) {
+			font-size: 2rem;
+			margin-bottom: 2.6rem;
+		}
+	}
+
+	&::backdrop {
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.bullets {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.6rem;
+		margin-bottom: 5.2rem;
+
+		@media (max-width: 700px) {
+			margin-bottom: 2.6rem;
+		}
+
+		svg {
+			cursor: pointer;
+		}
+
+		button {
+			background: none;
+			color: inherit;
+			border: none;
+			padding: 0;
+			font: inherit;
+			cursor: pointer;
+			outline: inherit;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 3.2rem;
+
+		@media (max-width: 700px) {
+			flex-direction: column;
+			gap: 1.6rem;
+		}
+
+		&__close {
+			border: 3px solid #929292;
+			border-radius: 1rem;
+			padding: 1.6rem 9.5rem;
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 1.6rem;
+			text-align: center;
+			background: transparent;
+			color: #929292;
+			cursor: pointer;
+			transition: all 0.3s;
+
+			&:hover {
+				background: #f5f5f5;
+				border: 3px solid #f5f5f5;
+				box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+				color: #6691ff;
+			}
+
+			&:active {
+				background: #435fa6;
+				border: 3px solid #435fa6;
+				box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+
+				color: #f5f5f5;
+			}
+		}
+
+		&__next {
+			background: #6691ff;
+			border-radius: 1rem;
+			padding: 1.6rem 9.5rem;
+			font-family: "TBC Contractica CAPS";
+			font-style: normal;
+			font-weight: 700;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			color: #f5f5f5;
+			cursor: pointer;
+			border: none;
+			transition: all 0.3s;
+
+			&:hover {
+				background: #f5f5f5;
+				box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+				color: #6691ff;
+			}
+
+			&:active {
+				background: #435fa6;
+				box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+
+				color: #f5f5f5;
+			}
+		}
+	}
+}
+
+.tabcontent {
+	display: none;
+}
+
+// #first-tab {
+// 	display: block;
+// }
+
+.active {
+	svg {
+		circle {
+			fill: #f5f5f5;
+		}
+	}
+}
+
+// ACCORDION STYLING
+
+.dropdown {
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width: 850px) {
+		border-bottom: 2px solid #929292;
+		padding-bottom: 2.2rem;
+	}
+
+	img {
+		display: none;
+
+		@media (max-width: 850px) {
+			display: block;
+		}
+		transition: all 0.2s ease-in-out;
+	}
+}
+
+.submenuItems {
+	display: none;
+}
+
+.footer__wrapper .footer__column.active .dropdown img {
+	transform: rotate(180deg);
+}
+
+.footer__wrapper .footer__column.active .submenuItems {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.glide-anima {
+	display: none;
+
+	@media (max-width: 1243px) {
+		display: block;
+		padding: 0 2rem;
+	}
+}
+
+.glide-history {
+	display: none;
+	padding-left: 2rem;
+	margin-bottom: 4rem;
+
+	@media (max-width: 768px) {
+		display: block;
+	}
+
+	&-slide {
+		display: flex;
+		padding: 2.4rem;
+		background: rgba(98, 98, 98, 0.2);
+		backdrop-filter: blur(2px);
+		border-radius: 1rem;
+		height: 48rem;
+		transition: all 0.2s;
+
+		@media (max-width: 700px) {
+			height: 45rem;
+		}
+		@media (max-width: 600px) {
+			height: 40rem;
+		}
+		@media (max-width: 500px) {
+			height: 38rem;
+		}
+
+		&:hover {
+			background: rgba(98, 98, 98, 0.35);
+		}
+
+		img {
+			width: 100%;
+		}
+
+		p {
+			overflow: hidden;
+			max-width: 200ch;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+		}
+	}
+}
+
+.full-text-btn {
+	display: none;
+	align-items: center;
+	align-self: flex-end;
+	gap: 6px;
+	margin-top: 2.4rem;
+	cursor: pointer;
+
+	img {
+		width: 7px;
+	}
+
+	p {
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.2rem;
+		line-height: 2.1rem;
+		/* identical to box height, or 175% */
+
+		color: #929292;
+	}
+}
+
+.full-text-btn-close {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: 2.4rem;
+	cursor: pointer;
+	img {
+		width: 7px;
+	}
+
+	p {
+		font-family: "TBC Contractica CAPS";
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.2rem;
+		line-height: 2.1rem;
+		/* identical to box height, or 175% */
+
+		color: #929292;
+	}
+}
+
+.history-items {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2411422523523;
+	width: 80%;
+	border-radius: 1rem;
+	border: none;
+
+	background: #1e1e1e;
+
+	&::backdrop {
+		background: rgba(0, 0, 0, 0.8);
+	}
+}
+
+.show {
+	display: block;
+}
+
+.history__dialog {
+	height: 100%;
+	padding: 2.4rem;
+
+	display: flex;
+	align-items: center;
+
+	color: white;
+}
+
+.solar__planets {
+	overflow-x: scroll;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+
+.solar__planets::-webkit-scrollbar {
+	display: none;
+}

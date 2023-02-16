@@ -1,0 +1,8 @@
+@mixin max-setter {
+	max-width: 1473px;
+	margin: 0 auto;
+
+	@media (max-width: 1520px) {
+		padding: 0 2rem;
+	}
+}

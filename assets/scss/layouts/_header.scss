@@ -1,0 +1,17 @@
+.header {
+	background: $base-color;
+	padding: 2.4rem 0rem;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include max-setter;
+	}
+
+	&__logos {
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+	}
+}

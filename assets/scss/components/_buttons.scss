@@ -1,0 +1,32 @@
+.btn {
+	display: flex;
+	gap: 1.6rem;
+	align-items: center;
+	padding: 1.6rem 3.2rem;
+	border: none;
+	color: $text-primary;
+	font-family: "TBC Contractica CAPS";
+	font-weight: 700;
+	font-size: 1.4rem;
+	border-radius: 1rem;
+	background: $base-color;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		background: $text-primary;
+		color: $base-color;
+
+		svg path {
+			fill: $base-color;
+		}
+	}
+
+	&:active {
+		background: #435fa6;
+		color: $text-primary;
+		svg path {
+			fill: $text-primary;
+		}
+	}
+}
